@@ -3,7 +3,7 @@ package com.example.lab08;
 import java.util.ArrayList;
 import java.util.List;
 
-//Class for custom list
+//Class for custom list with methods
 public class CustomList {
     private List<City> cities;
 
