@@ -3,6 +3,7 @@ package com.example.lab08;
 import java.util.ArrayList;
 import java.util.List;
 
+//Class for custom list
 public class CustomList {
     private List<City> cities;
 
@@ -18,4 +19,17 @@ public class CustomList {
 
     // Will be implemented later using TDD (leave blank for now)
     // public boolean hasCity(City city) { ... }
+
+//    public void delete(City city) {
+//        if (hasCity(city)) {
+//            cities.remove(city);
+//        }
+//        else {
+//            throw new IllegalArgumentException();
+//        }
+//    }
+//
+//    public int countCities() {
+//        return cities.size();
+//    }
 }
