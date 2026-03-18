@@ -13,4 +13,45 @@ public class CustomListTest {
         assertTrue(list.hasCity(calgary));
     }
 
+    @Test
+    public void testDeleteCity() {
+        CustomList cityList = new CustomList();
+        City city = new City("Charlottetown", "Prince Edward Island");
+        cityList.addCity(city);
+
+        //test to see if removes
+        cityList.deleteCity(city);
+        assertFalse(cityList.hasCity(city));
+
+        //test to see if exception thrown
+        assertThrows(IllegalArgumentException.class, () -> {
+            cityList.deleteCity(city);
+        });
+    }
+//
+//    @Test
+//    public void testCountCities() {
+//        CustomList cityList = new CustomList();
+//
+//        //tests no cities in list
+//        assertEquals(0, cityList.countCities());
+//
+//        cityList.add("Calgary", "AB");
+//        //test 1 city
+//        assertEquals(1, cityList.countCities());
+//
+//        //test 2 cities
+//        City city = new City("Charlottetown", "Prince Edward Island");
+//        cityList.add(city);
+//        assertEquals(2, cityList.countCities());
+//
+//        //test after 1 deletion
+//        cityList.delete(mockCity());
+//        assertEquals(1, cityList.countCities());
+//
+//        //test after complete deletion
+//        cityList.delete(city);
+//        assertEquals(0, cityList.countCities());
+//    }
+
 }
